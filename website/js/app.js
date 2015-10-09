@@ -1,5 +1,5 @@
 //creates a module (breaks the javascript up into different files also loads other services into the javascript)
-var website = angular.module('app', ['myApp.controllers', 'myApp.services', 'ui.module'])
+var website = angular.module('app', ['app.controllers', 'app.services', 'ui.module'])
 
 
 website.run(function () {
