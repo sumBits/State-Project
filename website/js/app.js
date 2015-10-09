@@ -7,6 +7,19 @@ website.run(function () {
 
   //here will be a function that checks to see if any login cookie exists if not login page
   //otherwise the fall back is the home page (code located at bottom of file)
+
+  //checks if user is online or not
+  $rootScope.online = navigator.onLine;
+      $window.addEventListener("offline", function () {
+        $rootScope.$apply(function() {
+          $rootScope.online = false; //it scopes all files for an html thing that says {{online}} it will change {{online}}  to true if online and false if offline
+        });                            //cane change message later by changing true or false
+      }, false);
+      $window.addEventListener("online", function () {
+        $rootScope.$apply(function() {
+          $rootScope.online = true;
+        });
+      }, false);
 })
 
 //url location of html files
