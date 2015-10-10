@@ -2,11 +2,17 @@
 var website = angular.module('app', ['app.controllers', 'app.services', 'ui.module'])
 
 
-website.run(function () {
+website.run(function ($stateProvider, $rootScope, $window) {
   //code that runs when website is first opened
 
   //here will be a function that checks to see if any login cookie exists if not login page
   //otherwise the fall back is the home page (code located at bottom of file)
+
+  if (/*userlogin status here */ === true) {
+    $state.go('home')
+  } else {
+    $state.go('signup')
+  }
 
   //checks if user is online or not
   $rootScope.online = navigator.onLine;
@@ -55,8 +61,13 @@ website.config(function ($stateProvider, $urlRouterProvider) {
       url: '/acount',
       templateUrl: '/templates/acount.html',
       controller: 'acountCtrl'
+    })
+    .state('404', {
+      url:'/whoopsies',
+      templateUrl: '/templates/404.html'
     });
 
-  //fallback state (inital state)
-  $urlRouterProvider.otherwise('/home');
+
+  //fallback state
+  $urlRouterProvider.otherwise('/404');
 });
