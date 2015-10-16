@@ -1,19 +1,19 @@
 //creates a module (breaks the javascript up into different files also loads other services into the javascript)
-var website = angular.module('app', ['app.controllers', 'app.services', 'ui.module'])
+var website = angular.module('app', ['app.controllers', 'app.services', 'ui.router']);
 
 
-website.run(function ($stateProvider, $rootScope, $window) {
+website.run(function ($state, $rootScope, $window) {
   //code that runs when website is first opened
 
   //here will be a function that checks to see if any login cookie exists if not login page
   //otherwise the fall back is the home page (code located at bottom of file)
 
-  if (/*userlogin status here */ === true) {
-    $state.go('home')
-  } else {
+//  if (/*userlogin status here */ === true) {
+//    $state.go('home')
+//  } else {
+//    $state.go('signup')
+//  }
     $state.go('signup')
-  }
-
   //checks if user is online or not
   $rootScope.online = navigator.onLine;
       $window.addEventListener("offline", function () {
@@ -53,7 +53,7 @@ website.config(function ($stateProvider, $urlRouterProvider) {
       controller: 'homeCtrl'
     })
     .state('signup', {
-      url '/', //bascially like www.websitename.com with nothing at the end
+      url: '/', //bascially like www.websitename.com with nothing at the end
       templateUrl: '/templates/signup.html',
       controller: 'signupCtrl'
     })
@@ -69,5 +69,5 @@ website.config(function ($stateProvider, $urlRouterProvider) {
 
 
   //fallback state
-  $urlRouterProvider.otherwise('/404');
+  $urlRouterProvider.otherwise('/whoopsies');
 });
