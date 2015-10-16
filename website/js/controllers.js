@@ -3,7 +3,7 @@
 
 //update now it grabs from directives because nothing uses directives but controllers i think
 //ill have to check but it doesnt matter it will work (maybe) either way
-var webctrl = angular.module('app.controllers', ['app.controllers.directives', 'firebase'])
+var webctrl = angular.module('app.controllers', ['firebase'])
 
 webctrl.controller('homeCtrl', function () {
 
