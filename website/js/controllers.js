@@ -15,7 +15,7 @@ webctrl.controller('acountCtrl', function () {
 
 webctrl.controller('signupCtrl', function ($firebase, fireBaseData) {
   //connects to database
-  var ref = new Firebase("firebaselinkthing");
+  var ref = new Firebase("https://sumbits-scroller.firebaseio.com/");
   var sync = $firebase(ref);
 
   //scopes the page to find createAccount
@@ -32,7 +32,7 @@ webctrl.controller('signupCtrl', function ($firebase, fireBaseData) {
       var Key = thing
       return Key
     }
-    
+
     var User_Data = {
       'Username': usn,
       'secret': Key

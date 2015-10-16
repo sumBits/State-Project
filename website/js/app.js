@@ -14,6 +14,7 @@ website.run(function ($stateProvider, $rootScope, $window) {
     $state.go('signup')
   }
 
+
   //checks if user is online or not
   $rootScope.online = navigator.onLine;
       $window.addEventListener("offline", function () {
