@@ -1,17 +1,17 @@
-<html>
-
 <body>
-    <header>
+  <header>
         <!-- appears if offline -->
-        <div id="OnlineOrOff" ng-hide="{{online}}">
-            <h1>Whoops! It appears you're offline</h1>
-        </div>
+    <div id="OnlineOrOff" ng-hide="{{online}}">
+      <h1>Whoops! It appears you're offline</h1>
+    </div>
+  </header>
 
-        <div id="mainheader" ng-show="{{online}}">
-            <!-- Actual header -->
-        </div>
-        heyyyyyyyyyyyyy
-    </header>
+  <div id="signupform">
+    <form>
+      Username: <input ng-model="user.name" ng-model-options="{ debounce: 500 }"/>
+      Email: <input ng-model="user.mail" ng-model-options="{ debounce: 500 }"/>
+      Password <input ng-show="checkUserNameAvalibility()" ng-model="user.password"/>
+    </form>
+    
+  </div>
 </body>
-
-</html>
