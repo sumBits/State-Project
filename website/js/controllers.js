@@ -3,17 +3,17 @@
 
 //update now it grabs from directives because nothing uses directives but controllers i think
 //ill have to check but it doesnt matter it will work (maybe) either way
-var webctrl = angular.module('app.controllers', ['firebase'])
+angular.module('app.controllers', ['firebase'])
 
-webctrl.controller('homeCtrl', function () {
-
-})
-
-webctrl.controller('acountCtrl', function () {
+.controller('homeCtrl', function () {
 
 })
 
-webctrl.controller('signupCtrl', function ($firebase, fireBaseData) {
+.controller('acountCtrl', function () {
+
+})
+
+.controller('signupCtrl', function ($firebase, fireBaseData) {
   //connects to database
   var ref = new Firebase("https://sumbits-scroller.firebaseio.com/");
   var sync = $firebase(ref);
@@ -59,6 +59,6 @@ webctrl.controller('signupCtrl', function ($firebase, fireBaseData) {
 //this controller is not directly linked to a webpage
 //this way it is accessable by any element
 // to use the controller in a element do <(element) ng-controller="animationCtrl">
-webctrl.controller('animationCtrl', function () {
+.controller('animationCtrl', function () {
 
 });
