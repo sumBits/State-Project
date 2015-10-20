@@ -2,7 +2,7 @@
 var website = angular.module('app', ['app.controllers', 'app.services', 'ui.router']);
 
 
-website.run(function ($state, $rootScope, $window) {
+website.run(function ($state, $rootScope, $window, $stateParams) {
   //code that runs when website is first opened
 
   //here will be a function that checks to see if any login cookie exists if not login page
@@ -13,7 +13,12 @@ website.run(function ($state, $rootScope, $window) {
 //  } else {
 //    $state.go('signup')
 //  }
-    $state.go('/signup')
+  $rootScope.$state = $state;
+  $rootScope.$stateParams = $stateParams;
+    // ui-sref='signup'
+    // $state.go('whoopsies')
+    // $state.go('home')
+    // $state.go('acount')
   //checks if user is online or not
   $rootScope.online = navigator.onLine;
       $window.addEventListener("offline", function () {
@@ -35,7 +40,17 @@ website.run(function ($state, $rootScope, $window) {
 //in fact you can make all the pages one page but seprate html files so that the whole website loads on the inital load
 //but for our purposes we will not be doing that
 
-website.config(function ($stateProvider, $urlRouterProvider) {
+website.config(function ($stateProvider, $urlRouterProvider, $locationProvider) { //enables html5 so that routing looks better
+
+  $locationProvider
+    .html5Mode(
+      {
+        enabled: true,
+        requireBase: false,
+      })
+    .hashPrefix('!');
+
+
   //calles the stateProvider which is basically a thing that handles the state of the html (what page it is on)
 
   //the html pages locations are always in template the way you work it is:
@@ -62,12 +77,14 @@ website.config(function ($stateProvider, $urlRouterProvider) {
       templateUrl: '/templates/acount.html',
       controller: 'acountCtrl'
     })
-    .state('404', {
+    .state('whoopsies', {
       url:'/whoopsies',
-      templateUrl: '/templates/404.html'
+      templateUrl: '/templates/whoopsies.html',
+      controller: 'fourofourCtrl'
     });
 
 
+
   //fallback state
-  $urlRouterProvider.otherwise('/whoopsies');
+  // $urlRouterProvider.otherwise('/whoopsies');
 });
