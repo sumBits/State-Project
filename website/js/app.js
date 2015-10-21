@@ -16,6 +16,7 @@ website.run(function ($state, $rootScope, $window, $stateParams) {
 //
     $rootScope.$state = $state;
     $rootScope.$stateParams = $stateParams;
+
     $state.go('signup');
     // $state.go('whoopsies')
     // $state.go('home')

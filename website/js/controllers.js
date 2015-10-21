@@ -31,15 +31,18 @@ angular.module('app.controllers', ['firebase'])
             put('User_Name_Cookie', usn);
 
             //random generate a key here
-            function Random_Gen_Key() {
+            function Random_Gen_Key(key_length) {
 
-                var Key = thing;
-                return Key
+                var user_key = null;
+
+                for (i = 0, key_length, i++) {
+                   user_key += randomnumberthing;
+                }
             }
 
             var User_Data = {
                 'Username': usn,
-                'secret': Key
+                'secret': user_key
             };
             put(Key, User_Data);
 
