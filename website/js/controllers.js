@@ -13,7 +13,7 @@ angular.module('app.controllers', ['firebase'])
 
 })
 
-.controller('acountCtrl', function () {
+.controller('accountCtrl', function () {
 
 })
 
@@ -33,15 +33,15 @@ angular.module('app.controllers', ['firebase'])
     //random generate a key here
     function Random_Gen_Key() {
 
-      var Key = thing
+      var Key = thing;
       return Key
     }
 
     var User_Data = {
       'Username': usn,
       'secret': Key
-    }
-    put(Key, User_Data)
+    };
+    put(Key, User_Data);
 
         // //creates account in firebase
         // //allowed to edit data stuff

@@ -31,7 +31,7 @@ website.run(function ($state, $rootScope, $window, $stateParams) {
           $rootScope.online = true;
         });
       }, false);
-})
+});
 
 //url location of html files
                         //these are providers in the angular ui https://github.com/angular-ui/ui-router/wiki/URL-Routing
@@ -46,7 +46,7 @@ website.config(function ($stateProvider, $urlRouterProvider, $locationProvider) 
     .html5Mode(
       {
         enabled: true,
-        requireBase: false,
+        requireBase: false
       })
     .hashPrefix('!');
 
@@ -72,10 +72,10 @@ website.config(function ($stateProvider, $urlRouterProvider, $locationProvider) 
       templateUrl: '/templates/signup.html',
       controller: 'signupCtrl'
     })
-    .state('acount', {
-      url: '/acount',
-      templateUrl: '/templates/acount.html',
-      controller: 'acountCtrl'
+    .state('account', {
+      url: '/account',
+      templateUrl: '/templates/account.html',
+      controller: 'accountCtrl'
     })
     .state('whoopsies', {
       url:'/whoopsies',
