@@ -77,11 +77,6 @@ website.config(function ($stateProvider, $urlRouterProvider, $locationProvider) 
             url: '/account',
             templateUrl: '/templates/account.html',
             controller: 'accountCtrl'
-        })
-        .state('whoopsies', {
-            url: '/whoopsies',
-            templateUrl: '/templates/whoopsies.html',
-            controller: 'fourofourCtrl'
         });
 
 

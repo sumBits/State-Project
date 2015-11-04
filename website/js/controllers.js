@@ -28,23 +28,23 @@ angular.module('app.controllers', ['firebase'])
             //check for username existance here
 
             //creates cookie with username
-            put('User_Name_Cookie', usn);
-
-            //random generate a key here
-            function Random_Gen_Key(key_length) {
-
-                var user_key = null;
-
-                for (i = 0, key_length, i++) {
-                   user_key += randomnumberthing;
-                }
-            }
-
-            var User_Data = {
-                'Username': usn,
-                'secret': user_key
-            };
-            put(Key, User_Data);
+            //put('User_Name_Cookie', usn);
+            //
+            ////random generate a key here
+            //function Random_Gen_Key(key_length) {
+            //
+            //    var user_key = null;
+            //
+            //    for (i = 0, key_length, i++) {
+            //       user_key += randomnumberthing;
+            //    }
+            //}
+            //
+            //var User_Data = {
+            //    'Username': usn,
+            //    'secret': user_key
+            //};
+            //put(Key, User_Data);
 
             // //creates account in firebase
             // //allowed to edit data stuff
