@@ -1,11 +1,4 @@
 <div ui-view>
-    <div class="header">
-        <!-- appears if offline -->
-        <div id="OnlineOrOff" ng-hide="{{online}}">
-            <h1>Whoops! It appears you're offline</h1>
-        </div>
-    </div>
-
     <div id="signupform">
         <form>
             Username: <input ng-model="user.name" ng-model-options="{ debounce: 500 }"/><br>
