@@ -3,6 +3,26 @@ var website = angular.module('app', ['app.controllers', 'app.services', 'ui.rout
 
 
 website.run(function ($state, $rootScope, $window, $stateParams) {
+
+    //loads twitter
+    window.twttr = (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+        if (d.getElementById(id)) return t;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+
+        t._e = [];
+        t.ready = function(f) {
+            t._e.push(f);
+        };
+
+        return t;
+    }(document, "script", "twitter-wjs"));
+    //loads facebook sdk
+    js.src = "//connect.facebook.net/en_US/sdk.js";
     //code that runs when website is first opened
 
     //here will be a function that checks to see if any login cookie exists if not login page
