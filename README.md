@@ -1,5 +1,5 @@
 # Scroll On
-[Check it out!](scrllon.com)
+[Check it out!](http://scrllon.com)
 
 ### What is Scroll On?
 This app's goal is to fix the problem with social media. Currently You have to constantly switch between several
@@ -13,7 +13,7 @@ You may need some tools to edit scroll on here's the current list:
 3. npm Static server (for local testing simple drag and drop index on chrome will not work for some of the code)
 
 ### Sass
-Sass is pretty easy to use learn it [here](sass-lang.com)
+Sass is pretty easy to use learn it [here](http://sass-lang.com)
 
 Ignore this next part if you know how to compile Sass
 
