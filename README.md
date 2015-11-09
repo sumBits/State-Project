@@ -27,30 +27,33 @@ If that command returns errors run this:
         
     sudo gem install sass
 Next check if it's installed
-
+```sh
     sass -v
+```
 Now to actively compile sass into css. First you must change directories to the styles folder after that run
 this command:
-
+```sh
     sass --watch styles.sass:styles.css
+```
 To stop do Ctrl + C then enter
 
 ### Gulp
 First you must have node.js installed
-
+```sh
     npm install -g gulp
-    
+ ```   
 Next open the gulpfile.js and for each var look up the gulp plugin and follow instructions to install.
 After you installed the plugins select the tasks you want to run by changing the array on the last line of the 
 gulpfile.js then run
-
+```sh
     gulp
-    
+```    
 ### npm static server
     npm -g install static-server
 In the directory that contains index.html
-
+```sh
     static-server
+```
 Open your browser and type in the address they give you. When making changes no need to run command again just
 save changes then refresh page
 
