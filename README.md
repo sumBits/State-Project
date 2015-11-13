@@ -8,6 +8,7 @@ annoying, but Scroll On is coming to fix this! All social media in one spot, go 
 
 ## Developer Information
 First things first you need [Node.js](https://nodejs.org/en/) to do anything
+
 You may need some tools to edit scroll on here's the current list:
 >1. Sass
 2. Gulp (not needed if you are not deploying)
