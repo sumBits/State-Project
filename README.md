@@ -42,9 +42,16 @@ First you must have node.js installed
 ```sh
 npm install -g gulp
  ```   
-Next open the gulpfile.js and for each var look up the gulp plugin and follow instructions to install.
+Next open the gulpfile.js and for each var for example
+```sh
+var example = require('gulp-example');
+```
+To install each plugin do for each plugin
+```sh
+npm install --save-dev gulp-example
+```
 After you installed the plugins select the tasks you want to run by changing the array on the last line of the 
-gulpfile.js then run
+gulpfile.js for example if no new images were added there is no reason to compress the images again then run
 ```sh
 gulp
 ```    
