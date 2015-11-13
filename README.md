@@ -49,7 +49,7 @@ First you must have node.js installed
 npm install -g gulp
  ```   
 Next open the gulpfile.js and for each var for example
-```sh
+```javascript
 var example = require('gulp-example');
 ```
 To install each plugin do for each plugin
