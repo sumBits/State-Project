@@ -6,6 +6,10 @@ This app's goal is to fix the problem with social media. Currently You have to c
 apps and websites to stay up to date with everything. This eats up your internet data and is really slow and 
 annoying, but Scroll On is coming to fix this! All social media in one spot, go ahead, scroll on.
 
+### Want in on ScrollOn?
+Request to join the ScrollOn project by emailing us@sumbits.io
+Please include your experience, GitHub, and any projects you've done and what language you used.
+
 ## Developer Information
 First things first you need [Node.js](https://nodejs.org/en/) to do anything
 
