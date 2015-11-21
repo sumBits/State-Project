@@ -1,0 +1,13 @@
+
+<div>
+    <div id="signupform">
+        <form>
+            Username: <input ng-model="user.name" ng-model-options="{ debounce: 500 }"/><br>
+            Email: <input ng-model="user.mail" ng-model-options="{ debounce: 500 }"/><br>
+            Password <input ng-show="checkUserNameAvalibility()" ng-model="user.password"/>
+        </form>
+
+        <button type="button" class="button" ng-click="homeGo()">Go Home; sign up still in dev</button>
+        <button type="button" class="button" ng-click="changeThemee()">change theme test</button>
+    </div>
+</div>

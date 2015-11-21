@@ -1,0 +1,17 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+body, html {
+  padding: 0;
+  margin: 0; }
+
+.button {
+  background: darkblue;
+  color: white; }
+
+.test {
+  height: 100%;
+  background-color: black; }
+
+/*# sourceMappingURL=styles.css.map */
