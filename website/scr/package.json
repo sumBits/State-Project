@@ -1,9 +1,0 @@
-{
-  "name": "scrollOn",
-  "version": "0.0.1",
-  "main": "electron.js",
-  "devDependencies": {
-    "gulp-atom-electron": "^1.0.0",
-    "gulp-symdest": "^1.0.0"
-  }
-}
